@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default" ng-controller="NavbarController as vm">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#!/store">Store</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown navbar-right" ng-show="vm.isLoggedIn">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> My Account<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#!/previous.orders">Your Orders</a></li>
+                        <li><a href="#">Your Details</a></li>
+                    </ul>
+                </li>
+                <li class="navbar-right" ng-hide="vm.isLoggedIn">
+                    <a href="#!/">Log In</a>
+                </li>
+                <li class="navbar-right" ng-hide="vm.isLoggedIn">
+                    <a href="#!/register">Register</a>
+                </li>
+                <li>
+                    <a href="#!/basket">
+                        <span class="glyphicon glyphicon-shopping-cart">  {{vm.basket.total | currency }}</span>
+                    </a>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>

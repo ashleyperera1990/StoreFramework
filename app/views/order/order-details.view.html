@@ -1,0 +1,107 @@
+<div class="row" xmlns="http://www.w3.org/1999/html">
+    <div class="basket">
+        <div class="container container-table">
+
+            <div class="row vertical-center-row">
+                <div class="text-center col-md-9 col-md-offset-2">
+                    <div class="well">
+
+                        <h4>Billing Address</h4>
+
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="inputFirstName" class="col-sm-2 control-label">First Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="vm.user.firstName" class="form-control"
+                                           id="inputFirstName" placeholder="First Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputSurname" class="col-sm-2 control-label">Surname</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="vm.user.surname" class="form-control"
+                                           id="inputSurname" placeholder="Surname">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputBillAddLine1" class="col-sm-2 control-label">Address Line 1</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="vm.user.address.line1" class="form-control"
+                                           id="inputBillAddLine1" placeholder="Address Line 1">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputBillAddLine2" class="col-sm-2 control-label">Address Line 2</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="vm.user.address.line2" class="form-control"
+                                           id="inputBillAddLine2" placeholder="Address Line 2">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputBillAddLine3" class="col-sm-2 control-label">City</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="vm.user.address.city" class="form-control"
+                                           id="inputBillAddLine3" placeholder="City">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputBillPostcode" class="col-sm-2 control-label">Postcode</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="vm.user.address.postcode" class="form-control"
+                                           id="inputBillPostcode" placeholder="Postcode">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" ng-model="vm.isDifferentDeliveryAddress" id="input">
+                                    I want to deliver to a different address
+                                </label>
+
+                            </div>
+                        </form>
+                        <form class="form-horizontal" ng-show="vm.isDifferentDeliveryAddress">
+                            <div class="form-group">
+                                <label for="inputAddLine1" class="col-sm-2 control-label">Address Line 1</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="vm.otherDeliveryDetails.addressLine1"
+                                           class="form-control"
+                                           id="inputAddLine1" placeholder="Address Line 1">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddLine2" class="col-sm-2 control-label">Address Line 2</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="vm.otherDeliveryDetails.addressLine2"
+                                           class="form-control"
+                                           id="inputAddLine2" placeholder="Address Line 2">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddLine3" class="col-sm-2 control-label">Address Line 3</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="vm.otherDeliveryDetails.addressLine3"
+                                           class="form-control"
+                                           id="inputAddLine3" placeholder="Address Line 3">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPostcode" class="col-sm-2 control-label">Postcode</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="vm.otherDeliveryDetails.postcode" class="form-control"
+                                           id="inputPostcode" placeholder="Postcode">
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="form-group">
+                            <button ng-click="vm.backToBasket()" class="btn btn-default">Go Back</button>
+                            <button ng-click="vm.continueToConfirm()" class="btn btn-success">Continue</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-3 col-sm-6" ng-repeat="item in vm.itemsForSale">
+        <div class="product">
+            <img src="..." alt="...">
+            <h5>{{item.name}}</h5>
+            <h6>{{item.description}}</h6>
+            <h6>{{item.price | currency}}</h6>
+            <button ng-click="vm.addToBasket(item)">Add To Basket</button>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+

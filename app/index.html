@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="StoreFramework">
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Store Framework</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+<body>
+<div class="container-fluid">
+    <!-- views -->
+    <div ng-include="'views/templates/navbar.view.html'"></div>
+    <div ng-view></div>
+</div>
+<!-- scripts -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="store-framework.module.js"></script>
+<script src="store-framework.config.js"></script>
+<script src="controller/user.controller.js"></script>
+<script src="controller/basket.controller.js"></script>
+<script src="controller/store.controller.js"></script>
+<script src="controller/product.controller.js"></script>
+<script src="controller/order.controller.js"></script>
+<script src="controller/navbar.controller.js"></script>
+<script src="service/basket.service.js"></script>
+<script src="service/product.service.js"></script>
+<script src="service/order.service.js"></script>
+<script src="service/user.service.js"></script>
+<script src="service/authentication.service.js"></script>
+<script src="store-framework.constants.js"></script>
+</body>
+</html>

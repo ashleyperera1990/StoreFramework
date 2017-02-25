@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="basket">
+        <div class="container container-table">
+            <div class="row vertical-center-row">
+                <div class="text-center col-md-9 col-md-offset-2">
+                    <div class="well">
+
+                        <h4>Billed to:</h4>
+
+                        <address>
+                            <strong>{{vm.order.fullName}}</strong><br>
+                            {{vm.order.billingAddress.line1}} <br>
+                            {{vm.order.billingAddress.line2}}<br>
+                            {{vm.order.billingAddress.city}}<br>
+                            {{vm.order.billingAddress.postcode}}<br>
+                        </address>
+
+                        <h4>Delivered to:</h4>
+
+                        <address>
+                            {{vm.order.deliveryAddress.line1}}<br>
+                            {{vm.order.deliveryAddress.line2}}<br>
+                            {{vm.order.deliveryAddress.city}}<br>
+                            {{vm.order.deliveryAddress.postcode}}<br>
+                        </address>
+
+                        <table class="table">
+                            <tr>
+                                <th>Item</th>
+                                <th>Quantity</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr ng-repeat="item in vm.order.items track by $index">
+                                <td>{{item.name}}</td>
+                                <td>{{item.quantity}}</td>
+                                <td>{{item.subTotal | currency}}</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <th>Total</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>{{ vm.order.total | currency }}</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <a ng-hide="vm.isPreviousOrder" href="#!/basket" class="btn btn-default">Go Back</a>
+                        <a ng-show="vm.isPreviousOrder" href="#!/previous.orders" class="btn btn-default">Go Back</a>
+                        <button ng-hide="vm.isPreviousOrder" ng-click="vm.submitOrder()" class="btn btn-success">Finish</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
